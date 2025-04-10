@@ -1,5 +1,39 @@
 :root {
-  --bg-gradient: linear-gradient(216.98deg, #08CC71 0%, #0C5736 34.05%, #0F0F0F 78.52%);
-  --btn-gradient: linear-gradient(90deg, rgba(0, 159, 81, 0.2) 59.62%, rgba(0, 0, 0, 0.04) 100%);
+  --bg-color: rgba(15, 15, 15, 1);
+  --bg-gradient: linear-gradient(127.04deg, rgba(15, 15, 15, 0.25) 2.44%, rgba(15, 15, 15, 0.0375) 2.63%, rgba(2, 141, 73, 0.25) 27.35%, rgba(0, 107, 55, 0.25) 68.88%),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));  
+  --bg-sidebar: rgba(15, 15, 15, 1);
+  --gray: rgba(212, 212, 212, 0.2);
+  --btn-gradient: linear-gradient(216.98deg, #7DFC22 0%, #65DE0E 21.9%, #0A9254 52.1%, #0C5736 75.89%);
+  --white: rgba(253, 253, 253, 1);  
+}
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Karla, sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: Karla;
+  src: url('/src/assets/Karla/Karla-VariableFont_wght.ttf');
+  src: url(/src/assets/Karla/static/Karla-Regular.ttf);
 }
