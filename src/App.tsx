@@ -1,7 +1,15 @@
+// import { useState } from "react"
+import { BrowserRouter, Routes, Route } from "react-router"
+import Dashboard from "./pages/Dashboard/Dashboard"
+
 export default function App() {
   return (
-    <>
-      <h1>JSX</h1>
-    </>
+    <BrowserRouter>
+     <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        
+     </Routes>
+    </BrowserRouter>
   )
 }
