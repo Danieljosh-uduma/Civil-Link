@@ -1,9 +1,18 @@
+import SideBar from "../../components/SideBar/SideBar"
+import Main from "../../components/Main/Main"
+import Header from "../../components/Header/Header"
+import Button from "../../components/Button/Button"
+
 export default function Dashboard() {
 
     return (
-        <div className="Dashboard">
-        <h1>Dashboard</h1>
-        <p>Welcome to the dashboard!</p>
-        </div>
+        <>
+            <SideBar />
+            <Main>
+                <Header />
+                <Button active={true} url="/dashboard" size="small">New</Button>
+            </Main>
+        </>
+        
     )
 }

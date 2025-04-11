@@ -1,0 +1,47 @@
+button {
+    color: var(--white);
+    background-color: var(--bg-color);
+    border: none;
+    width: 160px;
+    height: 48px;
+    padding: 0 16px;
+    text-align: left;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.small-btn {
+    width: 137px;
+}
+.large-btn {
+    width: 180px;
+}
+
+.btn-icon {
+    width: 24px;
+    height: 24px;
+}
+.active-btn {
+    background-image: var(--btn-gradient);
+}
+.btn {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    align-items: center !important;
+}
+
+.plane {
+    background-color: rgba(0, 135, 81, 0.9686);
+}
+
+.outline {
+    background: transparent;
+    border: 1px solid rgba(138, 254, 55, 1);
+}
