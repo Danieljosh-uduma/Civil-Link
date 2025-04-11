@@ -25,10 +25,10 @@ export default function SideBar() {
             <nav className="navbar">
                 <ul>
                     <li>
-                        <Button icon={HomeImg} size='large' url="/dashboard">Dashboard</Button>
+                        <Button icon={HomeImg} active={true} size='large' url="/dashboard">Dashboard</Button>
                     </li>
                     <li>
-                        <Button icon={OfficialImg} active={true} size='large'>Officials</Button>
+                        <Button icon={OfficialImg} size='large' url="/directory">Officials</Button>
                     </li>
                     <li>
                         <Button icon={ForumImg} size='large'>Public Forum</Button>

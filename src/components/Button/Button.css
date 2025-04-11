@@ -26,6 +26,7 @@ button {
 .btn-icon {
     width: 24px;
     height: 24px;
+    object-fit: contain;
 }
 .active-btn {
     background-image: var(--btn-gradient);
@@ -42,6 +43,15 @@ button {
 }
 
 .outline {
-    background: transparent;
-    border: 1px solid rgba(138, 254, 55, 1);
+    border: 1px solid var(--white);
+}
+.smaller-btn {
+    width: 127px;
+    height: 35px;
+}
+
+.rounded {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
 }

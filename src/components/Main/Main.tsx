@@ -1,10 +1,15 @@
 import { ReactNode } from "react";
 import './Main.css'
 
+type mainProps = {
+    children: ReactNode
+    className?: string
+}
+export default function Main(props: mainProps) {
+    const { children, className } = props
 
-export default function Main({children}: {children: ReactNode}) {
     return (
-        <main>
+        <main className={className}>
             {children}
         </main>
     )

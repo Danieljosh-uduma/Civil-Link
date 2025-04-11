@@ -1,0 +1,170 @@
+header {
+    margin-top: 10px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.search {
+    width: 500px;
+    height: 48px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+        width: inherit;
+        height: inherit;
+        background: transparent;
+        border: 1px solid #8AFE37;
+        border-radius: 8px;
+        font-size: 1.125rem;
+        font-weight: 500;
+        outline: none;
+        color: #F8F8F8;
+        padding-left: 50px;
+    }
+    input::placeholder {
+        color: #F8F8F880;
+    }
+    img {
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        left: 10px;
+    }
+}
+
+.location {
+    width: 249px;
+    height: 48px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+        width: inherit;
+        height: inherit;
+        background: transparent;
+        border: 1px solid #8AFE37;
+        border-radius: 8px;
+        font-size: 1.125rem;
+        font-weight: 500;
+        outline: none;
+        color: #F8F8F8;
+        padding-left: 50px;
+    }
+    input::placeholder {
+        color: #F8F8F880;
+    }
+    img {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 10px;
+    }
+}
+
+.profile {
+    width: 180px;
+    height: 280px;
+    background-color: var(--gray);
+    border-radius: 8px;
+    position: relative;
+
+    .img {
+        width: 180px;
+        height: 134px;
+        border-radius: inherit;
+
+        img {
+            width: inherit;
+            object-fit: cover;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: relative;
+        place-self: center;
+        top: -40px;
+
+        img {
+            border-radius: inherit !important;
+        }
+    }
+    .detail {
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: -30px;
+        }
+        .hash {
+            width: 130px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #008751F7;
+            border-radius: 12px;
+            place-self: center;
+            margin-top: 10px;
+
+            p {
+                color: #008751F7;
+            }
+        }
+        .btn {
+            width: 140px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+}
+
+.simple {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+.secondary {
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.normal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.span {
+    width: 800px;
+}
