@@ -149,12 +149,18 @@ export default function Dashboard() {
     )
 }
 
-
-function CustomComponent({children}: {children: ReactNode}) {
-
+type customProps = {
+    children: ReactNode
+    className?: string
+}
+function CustomComponent(props: customProps) {
+    const { children, className } = props
+    const style = className? `custom ${className}`: 'custom'
     return (
-        <div className="custom">
+        <div className={style}>
             {children}
         </div>
     )
 }
+
+export { CustomComponent }
