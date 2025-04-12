@@ -1,29 +1,27 @@
 import { Link } from 'react-router'
 import VerifiedIcon from '/src/assets/images/icons/verified.svg'
+import { cardProps } from '../../pages/Directories/Data'
 import './Card.css'
 
-type CardProps = {
-    img: string
-    name: string
-    title: string
-}
 
-export default function Card(props: CardProps) {
-    const { img, name, title} = props
+
+
+export default function Card(props: cardProps) {
+    const { pic, fullName, _id, position} = props
 
     return (
         <div className='card'>
             <div className="img">
-                <img src={img} alt={`${title} image`} />
+                <img src={pic} alt={`${fullName} image`} />
             </div>
             <h3>
-                {name}
+                {fullName}
                 <span>
                     <img src={VerifiedIcon} alt="verified personnel" />
                 </span>
             </h3>
-            <p>{title}</p>
-            <Link to={`/directory/${title}`}>View details</Link>
+            <p>{position ? (position.length > 20 ? position.slice(0, 20) + '...' : position) : 'No position available'}</p>
+            <Link to={`/directory/${_id}`}>View details</Link>
         </div>
     )
 }

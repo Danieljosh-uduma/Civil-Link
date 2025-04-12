@@ -5,13 +5,13 @@ import Profile from "../../components/Header/Profile"
 import Directory from "../../components/Directory/Directory"
 import ProfileImg from '../../assets/images/image4.png'
 import VerifiedIcon from '../../assets/images/icons/verified.svg'
-import { ReactNode } from "react"
+import { ReactNode, useContext } from "react"
 import Button from "../../components/Button/Button"
-import cards from "../Directories/Data"
-
+import { AppContext } from "../../App"
 
 
 export default function Dashboard() {
+    const directory = useContext(AppContext)
     
 
     return (
@@ -19,7 +19,7 @@ export default function Dashboard() {
             <Main className="dashboard">
                 <section className="dashboard-main">
                     <Header style="simple" />
-                    <Directory data={cards} />
+                    <Directory data={directory} />
                     
                     <CustomComponent>
                         <h3>TOP PUBLIC FORUM</h3>
