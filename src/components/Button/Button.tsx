@@ -10,7 +10,7 @@ type ButtonProps = {
     url?: string
     active?: boolean
     outline?: boolean
-    rounded?: boolean
+    rounded?: boolean | string
 }
 
 
@@ -21,7 +21,7 @@ export default function Button(props: ButtonProps) {
     style += size === 'large'? 'large-btn ': size === 'small'? 'small-btn ': size === 'smaller'? 'smaller-btn ': ''
     style += active? 'active-btn ': ''
     style += outline? 'outline ': ''
-    style += rounded? 'rounded ': ''
+    style += rounded === true? 'rounded ': rounded === 'small'? 'rounded-sm ': ''
 
     return (
         <Link to={url? url: '/'}>

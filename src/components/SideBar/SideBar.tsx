@@ -28,7 +28,7 @@ export default function SideBar() {
             <nav className="navbar">
                 <ul>
                     <li>
-                        <Button icon={HomeImg} {...(location.pathname === '/dashboard' ? { active: true } : {})} size='large' url="/dashboard">Dashboard</Button>
+                        <Button icon={HomeImg} {...(location.pathname === '/dashboard' || location.pathname === '/' ? { active: true } : {})} size='large' url="/dashboard">Dashboard</Button>
                     </li>
                     <li>
                         <Button icon={OfficialImg} {...(location.pathname === '/directory' ? { active: true } : {})} size='large' url="/directory">Officials</Button>
