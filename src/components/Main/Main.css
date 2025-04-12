@@ -3,6 +3,7 @@ main {
 linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     width: 100%;
     padding: 15px 30px;
+    box-sizing: border-box;
 }
 
 .dashboard {
@@ -19,8 +20,24 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         width: 20%;
         display: flex;
         flex-direction: column;
+        gap: 20px;
         align-items: center;
         justify-content: center;
+
+        h3 {
+            margin-left: 15px;
+        }
+        .item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin: 30px 15px;
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+        }
     }
 
     .dashboard-main {
@@ -73,6 +90,90 @@ linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         h3 {
             padding-left: 10px;
             padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            li {
+                display: flex;
+                gap: 30px;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    width: 250px;
+                    background-color: var(--gray);
+                    gap: 10px;
+                    padding: 5px 0;
+                    border-radius: 12px;
+                    margin-bottom: 10px;
+                    padding-left: 10px;
+                    span {
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+
+                    .verified {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                img {
+                    width: 37px;
+                    height: 37px;
+                    border-radius: 50%;
+                }
+                .associated {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50px;
+                        position: relative;
+                    }
+                    .others {
+                        margin-right: 20px;
+                    }
+                    :nth-child(2) {
+                        margin-left: -10px;
+                    }
+                    :nth-child(3) {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 5px;
+                        border: 1px solid var(--gray);
+                        -webkit-backdrop-filter: blur(5px);
+                        backdrop-filter: blur(5px);
+                        border-radius: 50px;
+                        position: relative;
+                        margin-left: -10px;
+                    }
+                }
+            }
         }
     }
+
+}
+
+.main-dir {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.main-dir::-webkit-scrollbar {
+    width: 0px;
+}
+.main-dir::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.main-dir::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }

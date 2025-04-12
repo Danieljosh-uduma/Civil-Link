@@ -1,21 +1,25 @@
-import SideBar from "../../components/SideBar/SideBar"
+// import SideBar from "../../components/SideBar/SideBar"
 import Main from "../../components/Main/Main"
 import Header from "../../components/Header/Header"
 import Profile from "../../components/Header/Profile"
 import Directory from "../../components/Directory/Directory"
 import ProfileImg from '../../assets/images/image4.png'
+import VerifiedIcon from '../../assets/images/icons/verified.svg'
 import { ReactNode } from "react"
-// import Button from "../../components/Button/Button"
+import Button from "../../components/Button/Button"
+import cards from "../Directories/Data"
+
+
 
 export default function Dashboard() {
+    
 
     return (
         <>
-            <SideBar />
             <Main className="dashboard">
                 <section className="dashboard-main">
                     <Header style="simple" />
-                    <Directory />
+                    <Directory data={cards} />
                     
                     <CustomComponent>
                         <h3>TOP PUBLIC FORUM</h3>
@@ -55,11 +59,89 @@ export default function Dashboard() {
                         </table>
                     </CustomComponent>
                     <CustomComponent>
-                        <h1>hello</h1>
+                        <h3>TOP TRENDIND OFFICIALS</h3>
+                        <ul>
+                            <li>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>Ahmed Tinubu</span>
+                                    <img className="verified" src={VerifiedIcon} alt="verified" />
+                                </div>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>Ahmed Tinubu</span>
+                                    <img className="verified" src={VerifiedIcon} alt="verified" />
+                                </div>
+                            </li>
+                            <li>
+                                <div className="item">
+                                    <div className="associated">
+                                        <img src={ProfileImg} alt="" />
+                                        <img src={ProfileImg} alt="" />
+                                        <div className="others">
+                                            <span>+3</span>
+                                        </div>
+                                        <Button variant="plane" size="smaller"> + Follow</Button>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className="associated">
+                                        <img src={ProfileImg} alt="" />
+                                        <img src={ProfileImg} alt="" />
+                                        <div className="others">
+                                            <span>+3</span>
+                                        </div>
+                                        <Button variant="plane" size="smaller"> + Follow</Button>
+                                    </div>
+                                </div>
+                                
+                            </li>
+                        </ul>
                     </CustomComponent>
                 </section>
                 <section className="sidebar">
                     <Profile profileType="full" />
+
+                    <section>
+                        <h3>Top Users</h3>
+                        <ul>
+                            <li>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>#User438hgdw</span>
+                                    <span>#120.54k</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>#User438hgdw</span>
+                                    <span>#120.54k</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>#User438hgdw</span>
+                                    <span>#120.54k</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>#User438hgdw</span>
+                                    <span>#120.54k</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="item">
+                                    <img src={ProfileImg} alt="profile image" />
+                                    <span>#User438hgdw</span>
+                                    <span>#120.54k</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
                 </section>
             </Main>
         </>

@@ -23,7 +23,7 @@ export default function Card(props: CardProps) {
                 </span>
             </h3>
             <p>{title}</p>
-            <Link to={`/${title}`}>View details</Link>
+            <Link to={`/directory/${title}`}>View details</Link>
         </div>
     )
 }
